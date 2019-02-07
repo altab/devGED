@@ -1,4 +1,4 @@
-package fr.pcohen.view;
+package fr.pcohen.view.swing;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,8 +26,16 @@ public class SearchBoxPan extends JPanel {
 		this.add(label, BorderLayout.WEST);
 		this.add(searchField, BorderLayout.CENTER);
 		this.add(buttonSearch, BorderLayout.EAST);
-
-
+		
 	}
+	
+	public JButton getButtonSearch() {
+		return buttonSearch;
+	}
+
+	public void setButtonSearch(JButton buttonSearch) {
+		this.buttonSearch = buttonSearch;
+	}
+
 
 }

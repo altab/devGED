@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import fr.pcohen.business.Document;
 import fr.pcohen.business.Tag;
-import fr.pcohen.view.Window;
+import fr.pcohen.view.swing.MainWindow;
 
 public class DevGED {
 
@@ -26,7 +26,7 @@ public class DevGED {
 		Document doc = new Document("mon Tire", "Ma description", "pdf", "http://wwww.pcohen.fr",tags);
 		System.out.println(doc);
 		
-		Window window = new Window();
+		MainWindow window = new MainWindow();
 
 	}
 
