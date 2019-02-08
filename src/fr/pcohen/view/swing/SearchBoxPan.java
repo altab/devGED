@@ -2,8 +2,6 @@ package fr.pcohen.view.swing;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,9 +11,9 @@ import javax.swing.JTextField;
 @SuppressWarnings("serial")
 public class SearchBoxPan extends JPanel {
 
-	JLabel label = new JLabel("Search # ");
-	JTextField searchField = new JTextField(20);
-	public JButton buttonSearch = new JButton("Search");
+	private JLabel label = new JLabel("Search # ");
+	private JTextField searchField = new JTextField(20);
+	private JButton buttonSearch = new JButton("Search");
 	
 	public SearchBoxPan(Window window) {
 		
@@ -26,7 +24,6 @@ public class SearchBoxPan extends JPanel {
 		label.setForeground(Color.GRAY);
 		
 		buttonSearch.addActionListener(new MainListener(this, window));
-		 
 		
 		this.add(label, BorderLayout.WEST);
 		this.add(searchField, BorderLayout.CENTER);
@@ -39,7 +36,17 @@ public class SearchBoxPan extends JPanel {
 		return buttonSearch;
 	}
 
-	public void setButtonSearch(JButton buttonSearch) {
+	public JTextField getSearchField() {
+		return searchField;
+	}
+
+
+	private void setSearchField(JTextField searchField) {
+		this.searchField = searchField;
+	}
+
+
+	private void setButtonSearch(JButton buttonSearch) {
 		this.buttonSearch = buttonSearch;
 	}
 

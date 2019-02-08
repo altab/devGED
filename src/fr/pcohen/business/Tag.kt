@@ -8,7 +8,7 @@ class Tag(tag: String?) {
         this.tag = tag
     }
 
-    fun getTag(tag: String?): String? {
+    fun getTag(): String? {
         return tag
     }
 

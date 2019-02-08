@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import fr.pcohen.business.Tag;
+
 public class MainListener implements ActionListener {
 	
 	private Window window;
@@ -22,9 +24,16 @@ public class MainListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		if (searchBoxPan instanceof SearchBoxPan) {
+			
+			Tag tag = new Tag(searchBoxPan.getSearchField().getText());
+			
 			JPanel center = new JPanel();
-			JLabel label = new JLabel("Bouton Recherche OK");
-			label.setForeground(Color.GRAY);
+			center.setBackground(new Color(51,51,51));
+			JLabel label = new JLabel("#"+tag.getTag());
+			
+			label.setOpaque(true);
+			label.setBackground(new Color(51,51,51));
+			label.setForeground(Color.LIGHT_GRAY);
 			center.add(label);
 			
 			window.deleteAndReplace(center);

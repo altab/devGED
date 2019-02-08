@@ -24,7 +24,7 @@ public class DevGED {
 		tags.add(new Tag("tag3"));
 		
 		Document doc = new Document("mon Tire", "Ma description", "pdf", "http://wwww.pcohen.fr",tags);
-		System.out.println(doc);
+		Sys.out(doc.toString());
 		
 		MainWindow MainWindow = new MainWindow();
 
