@@ -6,12 +6,7 @@ public class MainWindow extends Window {
 
 	public MainWindow() {
 		super();
-		
-		SearchBoxPan searchBoxPan = new SearchBoxPan();
-		searchBoxPan.getButtonSearch().addActionListener(new MainListener("searchBox", this));
-		
-		
-		
+		SearchBoxPan searchBoxPan = new SearchBoxPan(this);		
 	}
 	
 	@Override
@@ -19,12 +14,16 @@ public class MainWindow extends Window {
 	 * Efface le panel central pour le remplacer par un nouveau que l'on passe � la methode en parametre
 	 * @param nouveauPanel (JPanel)
 	 */
-	public void deleteAndReplace(JPanel newPanel) {
-				
+	public void deleteAndReplace(JPanel newPanel) {		
+		System.out.println("test");
 		this.getMainPan().removeAll();
 		this.getMainPan().add(newPanel);
 		this.getFullPan().repaint();
 		this.getFullPan().revalidate();
 	}
+	
+	public void test() {
+		System.out.println("test methode dans mainWindow");
+		}
 
 }

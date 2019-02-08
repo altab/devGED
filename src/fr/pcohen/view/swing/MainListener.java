@@ -9,24 +9,21 @@ import javax.swing.JPanel;
 
 public class MainListener implements ActionListener {
 	
-	private String origine;
 	private Window window;
+	private SearchBoxPan searchBoxPan;
 	
-	public MainListener(String origine, Window window ) {
+	public MainListener(SearchBoxPan searchBoxPan, Window window ) {
 		super();
-		this.origine = origine;
 		this.window = window;
+		this.searchBoxPan = searchBoxPan;		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("action OK");
-		System.out.println(origine);
 
-		if (origine == "searchBox") {
-			
+		if (searchBoxPan instanceof SearchBoxPan) {
 			JPanel center = new JPanel();
-			JLabel label = new JLabel("Recherche OK");
+			JLabel label = new JLabel("Bouton Recherche OK");
 			label.setForeground(Color.GRAY);
 			center.add(label);
 			

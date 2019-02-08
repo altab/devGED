@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 public abstract class Window extends JFrame {
 	  
 	private JPanel fullPan = new JPanel();
-	private SearchBoxPan searchBoxPan = new SearchBoxPan();
+	private SearchBoxPan searchBoxPan = new SearchBoxPan(this);
 	private JPanel mainPan = new JPanel();
 	private JPanel footerPan = new JPanel();
 	  
@@ -41,7 +41,7 @@ public abstract class Window extends JFrame {
 
   	}
   
-	public abstract void deleteAndReplace(JPanel newPanel);
+	public abstract void deleteAndReplace(JPanel newpanel);
 
 
 	public JPanel getFullPan() {

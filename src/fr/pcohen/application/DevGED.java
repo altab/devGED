@@ -26,7 +26,7 @@ public class DevGED {
 		Document doc = new Document("mon Tire", "Ma description", "pdf", "http://wwww.pcohen.fr",tags);
 		System.out.println(doc);
 		
-		MainWindow window = new MainWindow();
+		MainWindow MainWindow = new MainWindow();
 
 	}
 
