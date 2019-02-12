@@ -3,6 +3,8 @@ package fr.pcohen.application;
 import java.util.ArrayList;
 
 import fr.pcohen.business.Document;
+import fr.pcohen.business.Init;
+import fr.pcohen.business.Search;
 import fr.pcohen.business.Tag;
 import fr.pcohen.view.swing.MainWindow;
 
@@ -14,17 +16,15 @@ public class DevGED {
 		 * BLOC DE TEST
 		 */
 		
-		Tag tag = new Tag("mon tag");
-		System.out.println(tag);
+		Init init = new Init();
+		ArrayList<Document >documents = init.documents();
 		
+		ArrayList<Document >documentsOK = new Search(documents).byTag(new Tag("tag2"));
 		
-		ArrayList<Tag> tags =  new ArrayList<Tag>();
-		tags.add(tag);
-		tags.add(new Tag("tag2"));
-		tags.add(new Tag("tag3"));
+		for (Document document : documentsOK) {
+			Sys.out(document.getTitle()+ " OK");
+		}
 		
-		Document doc = new Document("mon Tire", "Ma description", "pdf", "http://wwww.pcohen.fr",tags);
-		Sys.out(doc.toString());
 		
 		MainWindow MainWindow = new MainWindow();
 

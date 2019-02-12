@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import fr.pcohen.application.Config;
 import fr.pcohen.business.Tag;
 
 public class MainListener implements ActionListener {
@@ -23,16 +24,16 @@ public class MainListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		if (searchBoxPan instanceof SearchBoxPan) {
+		if (this.searchBoxPan instanceof SearchBoxPan) {
 			
 			Tag tag = new Tag(searchBoxPan.getSearchField().getText());
 			
 			JPanel center = new JPanel();
-			center.setBackground(new Color(51,51,51));
+			center.setBackground(Config.BG_COLOR);
 			JLabel label = new JLabel("#"+tag.getTag());
 			
 			label.setOpaque(true);
-			label.setBackground(new Color(51,51,51));
+			label.setBackground(Config.BG_COLOR);
 			label.setForeground(Color.LIGHT_GRAY);
 			center.add(label);
 			

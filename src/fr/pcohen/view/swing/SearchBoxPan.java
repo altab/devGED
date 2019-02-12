@@ -8,9 +8,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-@SuppressWarnings("serial")
-public class SearchBoxPan extends JPanel {
+import fr.pcohen.application.Config;
 
+public class SearchBoxPan extends JPanel {
+	private static final long serialVersionUID = 7161761469146269514L;
+	
 	private JLabel label = new JLabel("Search # ");
 	private JTextField searchField = new JTextField(20);
 	private JButton buttonSearch = new JButton("Search");
@@ -19,7 +21,7 @@ public class SearchBoxPan extends JPanel {
 		
 		this.setLayout(new BorderLayout());
 		
-		this.setBackground(new Color(51,51,51));
+		this.setBackground(Config.BG_COLOR);
 		
 		label.setForeground(Color.GRAY);
 		

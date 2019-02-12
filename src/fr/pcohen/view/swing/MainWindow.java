@@ -5,10 +5,8 @@ import javax.swing.JPanel;
 public class MainWindow extends Window {
 	private static final long serialVersionUID = 1170636203017224784L;
 	
-
 	public MainWindow() {
-		super();
-		SearchBoxPan searchBoxPan = new SearchBoxPan(this);		
+		super();		
 	}
 	
 	@Override
@@ -22,5 +20,4 @@ public class MainWindow extends Window {
 		this.getFullPan().repaint();
 		this.getFullPan().revalidate();
 	}
-
 }

@@ -6,19 +6,20 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import fr.pcohen.application.Config;
 
-@SuppressWarnings("serial")
+
 public abstract class Window extends JFrame {
-	  
+	private static final long serialVersionUID = 8894306825025752857L;
+	
 	private JPanel fullPan = new JPanel();
 	private SearchBoxPan searchBoxPan = new SearchBoxPan(this);
 	private JPanel mainPan = new JPanel();
 	private JPanel footerPan = new JPanel();
 	  
-	  
 	public Window(){
 
-	    this.setTitle("DevGED");
+	    this.setTitle(Config.APPNAME +" - v"+Config.RELEASE);
 	    this.setSize(600, 800);
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,9 +32,9 @@ public abstract class Window extends JFrame {
 	    fullPan.add(mainPan, BorderLayout.CENTER);
 	    fullPan.add(footerPan, BorderLayout.SOUTH);
 	    
-	    mainPan.setBackground(new Color(51,51,51));
+	    mainPan.setBackground(Config.BG_COLOR);
 	    
-	    footerPan.setBackground(new Color(51,51,51));
+	    footerPan.setBackground(Config.BG_COLOR);
 	
 	    this.setContentPane(fullPan);               
 	
@@ -46,38 +47,31 @@ public abstract class Window extends JFrame {
 
 	public JPanel getFullPan() {
 		return fullPan;
-	}
-	
+	}	
 	
 	public SearchBoxPan getSearchBoxPan() {
 		return searchBoxPan;
 	}
-	
-	
+		
 	public JPanel getMainPan() {
 		return mainPan;
-	}
-	
+	}	
 	
 	public JPanel getFooterPan() {
 		return footerPan;
-	}
-	
+	}	
 	
 	public void setFullPan(JPanel fullPan) {
 		this.fullPan = fullPan;
 	}
-	
-	
+		
 	public void setSearchBoxPan(SearchBoxPan searchBoxPan) {
 		this.searchBoxPan = searchBoxPan;
-	}
-	
+	}	
 	
 	public void setMainPan(JPanel mainPan) {
 		this.mainPan = mainPan;
-	}
-	
+	}	
 	
 	public void setFooterPan(JPanel footerPan) {
 		this.footerPan = footerPan;
