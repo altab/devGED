@@ -17,14 +17,14 @@ public class DevGED {
 		 */
 		
 		// Création d'une recherche
-		Init init = new Init();
-		ArrayList<Document >documents = init.documents();
+		//Init init = new Init();
+//		ArrayList<Document >documents = new Init().documents();
 		
-		ArrayList<Document >documentsOK = new Search(documents).byTag(new Tag("tag2"));
-		
-		for (Document document : documentsOK) {
-			Sys.out(document.getTitle()+ " OK");
-		}
+//		ArrayList<Document >documentsOK = new Search(new Init().documents()).byTag(new Tag("tag2"));
+//		
+//		for (Document document : documentsOK) {
+//			Sys.out(document.getTitle()+ " OK");
+//		}
 		
 		
 		MainWindow MainWindow = new MainWindow();

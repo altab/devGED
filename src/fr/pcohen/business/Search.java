@@ -6,12 +6,22 @@ import fr.pcohen.application.Sys;
 
 public class Search {
 	
-	ArrayList<Document> documents;
-
+	private ArrayList<Document> documents;
+	
+	/**
+	 * Instanciate a new search of documents
+	 * Can be accessed by byTag() method
+	 * @param ArrayList<Document>
+	 */
 	public Search(ArrayList<Document> documents) {
 		setDocuments(documents);
 	}
 	
+	/**
+	 * verify if an arraylist of documents have an entry who match with a the tag
+	 * @param tag (Tag)
+	 * @return List of document containing tag (ArrayList<Document>)
+	 */
 	public ArrayList<Document> byTag(Tag tag) {
 		
 		ArrayList<Document> ListDocuments = new ArrayList<>();
@@ -38,7 +48,7 @@ public class Search {
 		return documents;
 	}
 
-	public void setDocuments(ArrayList<Document> documents) {
+	private void setDocuments(ArrayList<Document> documents) {
 		this.documents = documents;
 	}
 
