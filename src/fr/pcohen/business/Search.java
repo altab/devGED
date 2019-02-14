@@ -28,7 +28,6 @@ public class Search {
 		
 		//Lookup into each document of the array
 		for (Document document :  documents) {
-			Sys.out("On est dans la boucle des documents");
 			ArrayList<Tag> tags = document.getListTags();
 			
 			//compare our tag whit each tag of the document

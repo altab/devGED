@@ -43,7 +43,7 @@ public class MainListener implements ActionListener {
 			label.setOpaque(true);
 			label.setBackground(Config.BG_COLOR);
 			label.setForeground(Color.LIGHT_GRAY);
-//			center.add(label);
+			center.add(label);
 			center.add(searchResultsPan);
 			
 			window.deleteAndReplace(center);

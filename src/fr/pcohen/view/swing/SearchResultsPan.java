@@ -43,11 +43,9 @@ public class SearchResultsPan extends JPanel{
 				docPan.add(new JLabel(document.getContentURI()));
 				
 				panel.add(docPan);
-				//Sys.out(document.getTitle()+ " OK");
 			}
 		} else {
 			panel.add(new JLabel("No results found for #" + tag.getTag()));
-			Sys.out("dans le else");
 		}
 		
 		return panel;
