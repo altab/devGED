@@ -16,6 +16,7 @@ public class DevGED {
 		 * BLOC DE TEST
 		 */
 		
+		// Création d'une recherche
 		Init init = new Init();
 		ArrayList<Document >documents = init.documents();
 		

@@ -24,7 +24,7 @@ public class MainListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		if (this.searchBoxPan instanceof SearchBoxPan) {
+		if (searchBoxPan instanceof SearchBoxPan) {
 			
 			Tag tag = new Tag(searchBoxPan.getSearchField().getText());
 			
