@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import fr.pcohen.application.Sys;
 import fr.pcohen.business.Document;
 import fr.pcohen.business.Init;
 import fr.pcohen.business.Search;
@@ -43,7 +42,7 @@ public class SearchResultsPan extends JPanel{
 				docPan.add(new JLabel(document.getContentURI()));
 				
 				panel.add(docPan);
-			}
+ 			}
 		} else {
 			panel.add(new JLabel("No results found for #" + tag.getTag()));
 		}

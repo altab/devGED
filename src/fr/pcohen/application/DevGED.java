@@ -1,11 +1,5 @@
 package fr.pcohen.application;
 
-import java.util.ArrayList;
-
-import fr.pcohen.business.Document;
-import fr.pcohen.business.Init;
-import fr.pcohen.business.Search;
-import fr.pcohen.business.Tag;
 import fr.pcohen.view.swing.MainWindow;
 
 public class DevGED {
